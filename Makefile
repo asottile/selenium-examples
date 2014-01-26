@@ -1,9 +1,9 @@
-.PHONY: flakes tests clean
+.PHONY: all flakes tests clean scss presentation
 
 all: flakes
 
 flakes:
-	pyflakes tests setup.py
+	pyflakes selenium_examples tests setup.py
 
 test_venv: requirements.txt node_requirements.txt
 	rm -rf test_venv
@@ -16,29 +16,37 @@ test_venv: requirements.txt node_requirements.txt
 		nodeenv node_env --requirement=node_requirements.txt && \
 		source node_env/bin/activate && \
 		npm install bower && \
+		npm install node-sass && \
 		bower install'
 
-scss: test_venv
-	bash -c "source test_venv/bin/activate && cd assets && node-sass yelp_reveal.scss && node-sass presentation.scss"
+scss: assets/yelp_reveal.css assets/presentation.css
+
+presentation: scss
+	firefox selenium_presentation.html &
 
 test_user_name: flakes test_venv
-	bash -c "source test_venv/bin/activate && testify tests.test_set_user_name"
+	bash -c "source test_venv/bin/activate && \
+		testify tests.test_set_user_name"
 
 test_signup: flakes test_venv
-	bash -c "source test_venv/bin/activate && testify tests.test_signup"
+	bash -c "source test_venv/bin/activate && \
+		testify tests.test_signup"
 
 test_rosi: flakes test_venv
-	bash -c "source test_venv/bin/activate && testify tests.test_rosi_login"
+	bash -c "source test_venv/bin/activate && \
+		testify tests.test_rosi_login"
 
 serve: flakes test_venv
-	bash -c "source test_venv/bin/activate && python selenium_examples/main.py"
+	bash -c "source test_venv/bin/activate && \
+		python selenium_examples/main.py"
 
 selenium_start:
 	bash -c "java -jar bin/selenium-server-standalone-2.39.0.jar \
 		-Dwebdriver.chrome.driver=bin/chromedriver"
 
 create_fixtures: test_venv
-	bash -c "source test_venv/bin/activate && python create_fixtures.py"
+	bash -c "source test_venv/bin/activate && \
+		python create_fixtures.py"
 
 delete_fixtures:
 	rm -f example.db
@@ -48,3 +56,7 @@ clean: delete_fixtures
 	rm -rf node_env
 	find . -iname '*.pyc' -delete
 
+%.css: %.scss test_venv
+	bash -c "source test_venv/bin/activate && \
+		source node_env/bin/activate && \
+		node-sass $^ -o $@"
