@@ -1,7 +1,7 @@
 selenium-examples
 =================
 
-A Presentation for U of T about Selenium Testing at Yelp
+A Presentation for U of M about Selenium Testing at Yelp
 
 Instructions
 ---------------
@@ -9,7 +9,7 @@ Instructions
 Clone the repo
 
 ```
-git clone https://github.com/struys/selenium-examples.git
+git clone https://github.com/asottile/selenium-examples.git
 cd selenium-examples
 ```
 
@@ -45,8 +45,8 @@ make test_set_user_name
 make test_signup
 ```
 
-Run the selenium Test Against ROSI (U of T's course registration site)
+Run the selenium Test Against wolverineaccess (U of M's registration website)
 
 ```
-make test_rosi
+make test_wolverineaccess
 ```
