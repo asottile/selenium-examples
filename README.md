@@ -54,5 +54,5 @@ make test_signup
 Run the selenium Test Against wolverineaccess (U of M's registration website)
 
 ```
-make test_wolverineaccess
+make test_umich_degree
 ```
