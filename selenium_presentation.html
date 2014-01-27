@@ -31,12 +31,12 @@
                     <h3>An Introduction to Selenium</h3>
                 </section>
                 <section>
-                    <h2>About me: Ken Struys</h2>
+                    <h2>About me: Anthony Sottile</h2>
                     <ul>
-                        <li>2009 UofT CS Grad</li>
-                        <li>Web Dev Tech Lead</li>
-                        <li>Frontend for yelp.com</li>
-                        <li>Web Infrastructure</li>
+                        <li>2013 U of M CS LSA graduate</li>
+                        <li>Consumer team at yelp</li>
+                        <li>Web developer</li>
+                        <li>Web infrastructure</li>
                     </ul>
                 </section>
                 <section>
@@ -183,7 +183,7 @@
                         <ul>
                             <li>More high level</li>
                             <li>Use your best judgement when writing code</li>
-                            <li>Industry testing isn't science (CSC410 is science)</li>
+                            <li>Industry testing isn't science</li>
                             <li>What are the corner cases that might break?</li>
                         </ul>
                     </section>
@@ -202,7 +202,7 @@
     var testSetUserName = function() {
         var name = "Bob";
         setUserName(name);
-        assertEqual($('title').text, name);
+        assertEqual($('title').text(), name);
     };
                             </code>
                         </pre>
