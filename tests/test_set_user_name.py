@@ -10,7 +10,8 @@ class TestApplication(T.TestCase):
     @with_driver(
         DesiredCapabilities.FIREFOX,
         DesiredCapabilities.CHROME,
-        DesiredCapabilities.SAFARI,
+        # For example in OSX:
+        # DesiredCapabilities.SAFARI,
         DesiredCapabilities.OPERA
     )
     def test_set_user_name(self, driver):
