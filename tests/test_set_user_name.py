@@ -12,7 +12,7 @@ class TestApplication(T.TestCase):
         DesiredCapabilities.CHROME,
         # For example in OSX:
         # DesiredCapabilities.SAFARI,
-        DesiredCapabilities.OPERA
+        DesiredCapabilities.OPERA,
     )
     def test_set_user_name(self, driver):
         driver.get("http://localhost:5000")
