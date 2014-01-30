@@ -37,6 +37,11 @@ test_rosi: flakes test_venv
 	bash -c "source test_venv/bin/activate && \
 		testify tests.test_rosi_login"
 
+test_umich_degree: flakes test_venv
+	bash -c "source test_venv/bin/activate && \
+		testify tests.test_umich_degree"
+
+
 serve: flakes test_venv
 	bash -c "source test_venv/bin/activate && \
 		python selenium_examples/main.py"

@@ -31,16 +31,20 @@
                     <h3>An Introduction to Selenium</h3>
                 </section>
                 <section>
-                    <h2>About me: Ken Struys</h2>
+                    <h2>About me: Anthony Sottile</h2>
                     <ul>
-                        <li>2009 UofT CS Grad</li>
-                        <li>Web Dev Tech Lead</li>
-                        <li>Frontend for yelp.com</li>
-                        <li>Web Infrastructure</li>
+                        <li>2013 U of M CS LSA graduate</li>
+                        <li>Consumer team at yelp</li>
+                        <li>Web developer</li>
+                        <li>Web infrastructure</li>
                     </ul>
                 </section>
                 <section>
                     <h2>Let's Talk Test Theory</h2>
+                </section>
+                <section>
+                    <h3>Untested code</h3>
+                    <h3>is broken code</h3>
                 </section>
                 <section>
                     <h2>Application Graph</h2>
@@ -183,7 +187,7 @@
                         <ul>
                             <li>More high level</li>
                             <li>Use your best judgement when writing code</li>
-                            <li>Industry testing isn't science (CSC410 is science)</li>
+                            <li>Industry testing isn't science</li>
                             <li>What are the corner cases that might break?</li>
                         </ul>
                     </section>
@@ -202,11 +206,10 @@
     var testSetUserName = function() {
         var name = "Bob";
         setUserName(name);
-        assertEqual($('title').text, name);
+        assertEqual($('title').text(), name);
     };
                             </code>
                         </pre>
-                        <li>Responsible developers test their JavaScript</li>
                     </ul>
                 </section>
                 <section>
@@ -287,7 +290,7 @@
                             <li>Portable software testing framework for web applications</li>
                             <li>Mimics user behavior similar to a QA team</li>
                             <li>Libraries in Java, Ruby, Python, C#, etc.</li>
-                            <li>Write tests that operate on any browser/OS</li>
+                            <li>Write tests that operate on any browser / OS</li>
                         </ul>
                     </section>
                     <section>
@@ -380,8 +383,8 @@
                         <li><a href="https://pypi.python.org/pypi/selenium">Python Library</a> is reasonable (Java/Ruby is better)</li>
                         <li>We're working on open sourcing some great improvements</li>
                         <li>Follow <a href="https://github.com/Yelp">github.com/Yelp</a></li>
-                        <li>Demos will get you started <a href="https://github.com/struys/selenium-examples">github.com/struys/selenium-examples</a></li>
-                        <li>Contact me if you get stuck <a href="http://twitter.com/kenstruys">@kenstruys</a></li>
+                        <li>Demos will get you started <a href="https://github.com/asottile/selenium-examples">github.com/asottile/selenium-examples</a></li>
+                        <li>Contact me if you get stuck <a href="mailto:asottile+selenium@yelp.com">asottile+selenium@yelp.com</a></li>
                     </ul>
                 </section>
                 <section>
