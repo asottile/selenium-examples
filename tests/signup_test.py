@@ -11,8 +11,7 @@ class TestApplication(T.TestCase):
     @with_driver(
         DesiredCapabilities.FIREFOX,
         DesiredCapabilities.CHROME,
-        # For example in OSX
-        # DesiredCapabilities.SAFARI,
+        DesiredCapabilities.SAFARI,
         DesiredCapabilities.OPERA,
     )
     def test_signup(self, driver):

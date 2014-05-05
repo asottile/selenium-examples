@@ -56,7 +56,6 @@ class DB(object):
         INSERT INTO user VALUES (?, ?, ?, ?)
         """, (None, name, email, password))
 
-
     @with_cursor
     def initialize_schema(self, cursor):
         cursor.execute("""
@@ -71,10 +70,10 @@ class DB(object):
     @staticmethod
     def format_user_tuple(t):
         return {
-        'id': t[0],
-        'name': t[1],
-        'email': t[2],
-        'password': t[3],
+            'id': t[0],
+            'name': t[1],
+            'email': t[2],
+            'password': t[3],
         }
 
 
@@ -85,5 +84,3 @@ class View(object):
 
 db = DB()
 view = View()
-
-

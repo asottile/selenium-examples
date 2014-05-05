@@ -1,0 +1,7 @@
+linters:
+  NameFormat:
+    exclude:
+      - 'assets/yelp_reveal.scss'
+  SelectorDepth:
+    exclude:
+      - 'assets/yelp_reveal.scss'
