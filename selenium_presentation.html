@@ -10,7 +10,6 @@
         <script>
             document.write( '<link rel="stylesheet" href="bower_components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
         </script>
-
     </head>
 
     <body>
@@ -27,7 +26,7 @@
                     </ul>
                 </section>
                 <section>
-                    <h1>Integration Testing The Web</h1>
+                    <h2>Integration Testing The Web</h2>
                     <h3>An Introduction to Selenium</h3>
                 </section>
                 <section>
@@ -112,9 +111,8 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>Test the unit under test</h2>
-                        <pre>
-                            <code>
+                        <h3>Test the unit under test</h3>
+                        <pre><code>
         def render_homepage(user_id):
             user_info = get_user(user_id)
 
@@ -127,8 +125,7 @@
             """.format(user_info['name'])
 
             return homepage_html
-                            </code>
-                        </pre>
+                        </code></pre>
                         <ul>
                             <li>Test we connected the result of get_user with html and returned it</li>
                         </ul>
